@@ -12,7 +12,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 source ~/.bashrc
 nvm install v14.18.2
-nvm use v114.18.2
+nvm use v14.18.2
 node -v
 echo "End Node"
 echo "Start ocrmypdf"
@@ -55,7 +55,14 @@ sudo apt install openssh-server -y
 echo "End openssh-server"
 echo "Start netplan"
 sudo apt install netplan -y
-echo "End netplan"
+echo "Start mariadb"
+sudo apt update -y
+sudo apt install mariadb-server -y
+echo "End mariadb"
+echo "Start phpmyadmin"
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+echo "End phpmyadmin"
+
 
 
 
