@@ -5,3 +5,16 @@ netmask 255.255.255.0
 network 192.168.116.0
 broadcast 192.168.116.255
 gateway 192.169.116.1
+
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      dhcp4: no
+      addresses:
+        - 192.168.121.199/24
+      gateway4: 192.168.121.1
+      nameservers:
+          addresses: [8.8.8.8, 1.1.1.1] 
